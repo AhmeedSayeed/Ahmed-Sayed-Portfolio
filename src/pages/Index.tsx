@@ -27,7 +27,7 @@ const Index = () => {
       <footer className="bg-gradient-card border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            © 2024 John Doe. All rights reserved. Built with passion and precision.
+            © 2025 Ahmed Sayed. All rights reserved. Built with passion and precision.
           </p>
         </div>
       </footer>
