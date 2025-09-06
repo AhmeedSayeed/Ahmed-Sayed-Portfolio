@@ -6,6 +6,7 @@ import { Menu } from 'lucide-react';
 const Header = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navItems = [
     { id: 'about', label: 'About' },
@@ -49,7 +50,12 @@ const Header = () => {
   };
 
   const handleMobileNavClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+    // أقفل الـ Sheet الأول
+    setIsSheetOpen(false);
+    // استنى شوية عشان الـ animation يخلص
+    setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 300);
   };
 
   return (
@@ -85,7 +91,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu */}
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <button className="md:hidden p-2 text-primary hover:text-accent transition-colors">
                 <Menu className="w-6 h-6" />
@@ -98,17 +104,18 @@ const Header = () => {
                 </h2>
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => handleMobileNavClick(item.id)}
-                      className={`text-left py-3 px-4 rounded-lg transition-colors ${
-                        activeSection === item.id 
-                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                          : 'text-foreground hover:bg-accent/10 hover:text-accent'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
+                    <SheetClose key={item.id} asChild>
+                      <button
+                        onClick={() => handleMobileNavClick(item.id)}
+                        className={`text-left py-3 px-4 rounded-lg transition-colors ${
+                          activeSection === item.id 
+                            ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                            : 'text-foreground hover:bg-accent/10 hover:text-accent'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    </SheetClose>
                   ))}
                 </nav>
               </div>
