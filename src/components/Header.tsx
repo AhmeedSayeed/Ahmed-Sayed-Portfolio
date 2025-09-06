@@ -48,6 +48,10 @@ const Header = () => {
     }
   };
 
+  const handleMobileNavClick = (sectionId: string) => {
+    scrollToSection(sectionId);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -94,18 +98,17 @@ const Header = () => {
                 </h2>
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <SheetClose key={item.id} asChild>
-                      <button
-                        onClick={() => scrollToSection(item.id)}
-                        className={`text-left py-3 px-4 rounded-lg transition-colors ${
-                          activeSection === item.id 
-                            ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                            : 'text-foreground hover:bg-accent/10 hover:text-accent'
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    </SheetClose>
+                    <button
+                      key={item.id}
+                      onClick={() => handleMobileNavClick(item.id)}
+                      className={`text-left py-3 px-4 rounded-lg transition-colors ${
+                        activeSection === item.id 
+                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                          : 'text-foreground hover:bg-accent/10 hover:text-accent'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
                   ))}
                 </nav>
               </div>
