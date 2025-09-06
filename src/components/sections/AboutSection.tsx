@@ -39,7 +39,7 @@ const AboutSection = () => {
         }`}>
           
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-start order-1 lg:order-2">
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
               <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-elegant animate-float">
                 <img 
@@ -55,7 +55,7 @@ const AboutSection = () => {
           </div>
 
           {/* Content */}
-          <div className="space-y-8 order-2 lg:order-1">
+          <div className="space-y-10 order-2 lg:order-1">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold">
                 <span className="text-foreground">Hello, I'm </span>
