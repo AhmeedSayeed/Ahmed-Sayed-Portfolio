@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../data/personal';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Menu } from 'lucide-react';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -78,12 +80,36 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-primary hover:text-accent transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="md:hidden p-2 text-primary hover:text-accent transition-colors">
+                <Menu className="w-6 h-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80 bg-background border-border">
+              <div className="flex flex-col space-y-6 mt-8">
+                <h2 className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+                  {personalData.name}
+                </h2>
+                <nav className="flex flex-col space-y-4">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`text-left py-3 px-4 rounded-lg transition-colors ${
+                        activeSection === item.id 
+                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                          : 'text-foreground hover:bg-accent/10 hover:text-accent'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
