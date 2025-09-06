@@ -105,11 +105,13 @@ const AchievementsSection = () => {
             <div className="text-sm text-muted-foreground">Pass Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">3</div>
+            <div className="text-4xl font-bold text-primary mb-2">2</div>
             <div className="text-sm text-muted-foreground">Cloud Platforms</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">2023</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              {achievementsData.reduce((max, item) => item.date > max.date ? item : max).date}
+            </div>
             <div className="text-sm text-muted-foreground">Latest Cert</div>
           </div>
         </div>
