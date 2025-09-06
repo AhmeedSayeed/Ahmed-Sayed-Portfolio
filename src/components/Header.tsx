@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../data/personal';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
 import { Menu } from 'lucide-react';
 
 const Header = () => {
@@ -94,17 +94,18 @@ const Header = () => {
                 </h2>
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className={`text-left py-3 px-4 rounded-lg transition-colors ${
-                        activeSection === item.id 
-                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                          : 'text-foreground hover:bg-accent/10 hover:text-accent'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
+                    <SheetClose key={item.id} asChild>
+                      <button
+                        onClick={() => scrollToSection(item.id)}
+                        className={`text-left py-3 px-4 rounded-lg transition-colors ${
+                          activeSection === item.id 
+                            ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                            : 'text-foreground hover:bg-accent/10 hover:text-accent'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    </SheetClose>
                   ))}
                 </nav>
               </div>
