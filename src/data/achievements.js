@@ -10,7 +10,7 @@ export const achievementsData = [
     organization: "ECPC",
     date: "2025",
     image: ecpc2025,
-    description: "Ranked 19th out of 82 at FCAI-CU"
+    description: "Ranked 19th out of 82 at FCAI-CU, 61th out of 220 overall on the day"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const achievementsData = [
     organization: "ECPC",
     date: "2024",
     image: ecpc2024,
-    description: "Ranked 32th out of 82 at FCAI-CU"
+    description: "Ranked 32th out of 82 at FCAI-CU, 97th out of 261 overall on the day"
   },
   {
     id: 3,

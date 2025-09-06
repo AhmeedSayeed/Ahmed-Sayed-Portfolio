@@ -62,7 +62,7 @@ const ExperienceSection = () => {
                       <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {experience.company}
                       </h3>
-                      <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mt-2 sm:mt-0">
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mt-2 sm:mt-0">
                         {experience.startDate} - {experience.endDate}
                       </span>
                     </div>

@@ -58,10 +58,10 @@ const EducationSection = () => {
 
                 {/* Date and GPA */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
                     {education.startDate} - {education.endDate}
                   </span>
-                  <span className="text-sm font-bold text-accent">
+                  <span className="text-xs font-bold text-accent">
                     GPA: {education.gpa}
                   </span>
                 </div>
