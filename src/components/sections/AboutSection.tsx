@@ -38,8 +38,24 @@ const AboutSection = () => {
           isVisible ? 'animate-fade-in-up' : 'opacity-0'
         }`}>
           
+          {/* Profile Image */}
+          <div className="flex justify-center lg:justify-start order-1 lg:order-2">
+            <div className="relative">
+              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-elegant animate-float">
+                <img 
+                  src={profileImage}
+                  alt={personalData.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-bounce-slow"></div>
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-gold rounded-full opacity-30 animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
+            </div>
+          </div>
+
           {/* Content */}
-          <div className="space-y-8 order-1 lg:order-2">
+          <div className="space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold">
                 <span className="text-foreground">Hello, I'm </span>
@@ -71,35 +87,19 @@ const AboutSection = () => {
 
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8">
+                {/* <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">0+</div>
+                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                </div> */}
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">5+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">50+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">15+</div>
+                {/* <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">1+</div>
                   <div className="text-sm text-muted-foreground">Happy Clients</div>
-                </div>
+                </div> */}
               </div>
-            </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-elegant animate-float">
-                <img 
-                  src={profileImage}
-                  alt={personalData.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-bounce-slow"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-gold rounded-full opacity-30 animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>
