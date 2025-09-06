@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../../data/personal';
-import profileImage from '../../assets/profile-placeholder.jpg';
+import profileImage from '../../assets/profile-pic.jpg';
 
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
