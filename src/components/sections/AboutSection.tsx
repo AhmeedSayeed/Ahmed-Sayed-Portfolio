@@ -74,8 +74,8 @@ const AboutSection = () => {
                 {personalData.uspStatement}
               </p>
 
-              {/* CTA Button */}
-              <div className="pt-4">
+              {/* CTA Buttons */}
+              <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <button 
                   onClick={handleCTAClick}
                   className="btn-hero group relative overflow-hidden"
@@ -83,6 +83,17 @@ const AboutSection = () => {
                   <span className="relative z-10">{personalData.ctaText}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
+                
+                <a 
+                  href="https://drive.usercontent.google.com/download?id=1gEUs_9DZU-yiF6ejy-c6azA_tEnoalX4&export=download&authuser=0&confirm=t&uuid=92b2861a-0941-4a69-9663-a15b81dfc094&at=AN8xHoo8-A9MiOSwzLPMOj_FGPUu:1757186823187"
+                  download
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Download Resume
+                </a>
               </div>
 
               {/* Quick Stats */}
