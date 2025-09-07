@@ -38,7 +38,7 @@ const AchievementsSection = () => {
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${
           isVisible ? 'animate-scale-in' : 'opacity-0'
         }`}>
-          {achievementsData.map((achievement, index) => (
+          {achievementsData.sort((a, b) => b.date - a.date).map((achievement, index) => (
             <div 
               key={achievement.id}
               className="card-elegant group hover:shadow-gold cursor-pointer relative overflow-hidden"
