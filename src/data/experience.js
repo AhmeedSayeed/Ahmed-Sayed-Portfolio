@@ -13,7 +13,7 @@ export const experienceData = [
     company: "Elevvo Pathways",
     position: "Frontend Developer Intern",
     startDate: "Aug 2025",
-    endDate: "Feb 2025",
+    endDate: "Sep 2025",
     description: "Worked on various frontend tasks using React, JavaScript, and Tailwind CSS. \
     Focused on building responsive user interfaces, creating reusable components, and optimizing the development workflow."
   },
