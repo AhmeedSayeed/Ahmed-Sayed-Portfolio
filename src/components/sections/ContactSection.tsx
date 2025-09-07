@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../../data/personal';
 import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,6 +12,7 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
+  const { toast } = useToast();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,10 +58,17 @@ const ContactSection = () => {
         message: ''
       });
 
-      alert('Message sent successfully! I\'ll get back to you soon.');
+      toast({
+        title: "Message sent successfully!",
+        description: "I'll get back to you soon.",
+      });
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('Failed to send message. Please try again or contact me directly.');
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
