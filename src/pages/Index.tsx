@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import AboutSection from '../components/sections/AboutSection';
 import SkillsSection from '../components/sections/SkillsSection';
+import ProjectsSection from '../components/sections/ProjectsSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import EducationSection from '../components/sections/EducationSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <AboutSection />
         <SkillsSection />
+        <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
         <TestimonialsSection />
