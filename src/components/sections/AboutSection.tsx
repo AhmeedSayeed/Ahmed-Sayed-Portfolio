@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../../data/personal';
+import { projectsData } from '../../data/projects.js';
 import profileImage from '../../assets/profile-pic.jpg';
 
 const AboutSection = () => {
@@ -103,7 +104,7 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div> */}
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">5+</div>
+                  <div className="text-3xl font-bold text-primary">{projectsData.length}+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 {/* <div className="text-center">
