@@ -34,7 +34,7 @@ export const projectsData = [
     Each project demonstrates modern UI design with React and Tailwind CSS, along with API integration, state management, and reusable components.",
     technologies: ["React JS", "Tailwind CSS", "JSX"],
     image: elevvoInternshipTasks,
-    liveUrl: null,
+    liveUrl: "https://elevvo-internship.vercel.app/",
     githubUrl: "https://github.com/AhmeedSayeed/Elevvo-Internship",
     featured: true
   },
