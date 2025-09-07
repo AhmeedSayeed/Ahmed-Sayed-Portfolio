@@ -8,8 +8,8 @@ export const projectsData = [
   {
     id: 1,
     title: "Online Library Website",
-    description: " A comprehensive web application providing users with book search and borrowing capabilities while allowing \
-    administrators to manage the library inventory. ",
+    description: "A comprehensive web application providing users with book search and borrowing capabilities while allowing \
+    administrators to manage the library inventory.",
     technologies: ["Vanilla JS", "Django", "SQLite", "Python"],
     image: onlineLibraryWebsite,
     liveUrl: "https://online-library-website-five.vercel.app",
@@ -19,7 +19,7 @@ export const projectsData = [
   {
     id: 2,
     title: "Games Rental System",
-    description: "A database-driven platform where users can browse, rent, and return games, while admins manage the catalog. \
+    description: "A Windows forms application where users can browse, rent, and return games, while admins manage the catalog. \
     Includes reporting queries for insights into rentals, popular titles, and vendor performance.",
     technologies: ["C#", "Winforms", "ADO.NET", "Microsoft SQL Server"],
     image: gamesRentalSystem,
@@ -41,7 +41,7 @@ export const projectsData = [
   {
     id: 4,
     title: "Baby Photoshop",
-    description: "Acomprehensive image editing application developed with C++ and Qt, featuring 22 custom-designed filters \
+    description: "A comprehensive image editing application developed with C++ and Qt, featuring 22 custom-designed filters \
     including edge detection, blur effects, and artistic transformations.",
     technologies: ["C++", "QT"],
     image: babyPhotoshop,
