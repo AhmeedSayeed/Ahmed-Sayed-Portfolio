@@ -66,7 +66,7 @@ const ProjectsSection = () => {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="flex-1"
+                      className={project.liveUrl ? "flex-1" : "w-full"}
                       asChild
                     >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
