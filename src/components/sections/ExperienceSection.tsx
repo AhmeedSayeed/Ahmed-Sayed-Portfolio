@@ -41,7 +41,8 @@ const ExperienceSection = () => {
 
           {/* Experience items */}
           <div className="space-y-12">
-            {experienceData.map((experience, index) => (
+            {experienceData.sort((a, b) => b.date - a.date)
+            .map((experience, index) => (
               <div 
                 key={experience.id}
                 className={`relative flex flex-col md:flex-row items-start md:items-center ${

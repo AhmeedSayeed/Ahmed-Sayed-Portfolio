@@ -1,62 +1,63 @@
+import onlineLibraryWebsite from '../assets/online library website.png'
+import gamesRentalSystem from '../assets/games rental system.png'
+import elevvoInternshipTasks from '../assets/elevvo internship tasks.png'
+import restaurantManagementSystem from '../assets/restaurant management system.png'
+import babyPhotoshop from '../assets/baby photoshop.png'
+
 export const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include payment integration, inventory management, and real-time analytics.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center",
-    liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
+    title: "Online Library Website",
+    description: " A comprehensive web application providing users with book search and borrowing capabilities while allowing \
+    administrators to manage the library inventory. ",
+    technologies: ["Vanilla JS", "Django", "SQLite", "Python"],
+    image: onlineLibraryWebsite,
+    liveUrl: "https://online-library-website-five.vercel.app",
+    githubUrl: "https://github.com/AhmeedSayeed/Online-Library-website",
     featured: true
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Collaborative project management tool with real-time updates, file sharing, and team communication features built with React and Firebase.",
-    technologies: ["React", "Firebase", "Material-UI", "WebRTC"],
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&crop=center",
+    title: "Games Rental System",
+    description: "A database-driven platform where users can browse, rent, and return games, while admins manage the catalog. \
+    Includes reporting queries for insights into rentals, popular titles, and vendor performance.",
+    technologies: ["C#", "Winforms", "ADO.NET", "Microsoft SQL Server"],
+    image: gamesRentalSystem,
     liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
+    githubUrl: "https://github.com/AhmeedSayeed/DB-PJK",
     featured: true
   },
   {
     id: 3,
-    title: "AI-Powered Analytics Dashboard",
-    description: "Business intelligence dashboard with machine learning insights, data visualization, and predictive analytics using Python and React.",
-    technologies: ["React", "Python", "TensorFlow", "D3.js", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center",
+    title: "Elevvo Internship Tasks",
+    description: "A set of practical web applications including a Landing Page, Personal Blog, and a Weather Dashboard. \
+    Each project demonstrates modern UI design with React and Tailwind CSS, along with API integration, state management, and reusable components.",
+    technologies: ["React JS", "Tailwind CSS", "JSX"],
+    image: elevvoInternshipTasks,
     liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
+    githubUrl: "https://github.com/AhmeedSayeed/Elevvo-Internship",
     featured: true
   },
   {
     id: 4,
-    title: "Real Estate Platform",
-    description: "Property listing and management system with advanced search, virtual tours, and mortgage calculator features.",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Google Maps API"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop&crop=center",
+    title: "Baby Photoshop",
+    description: "Acomprehensive image editing application developed with C++ and Qt, featuring 22 custom-designed filters \
+    including edge detection, blur effects, and artistic transformations.",
+    technologies: ["C++", "QT"],
+    image: babyPhotoshop,
     liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
-    featured: false
+    githubUrl: "https://github.com/AhmeedSayeed/Baby-Photoshop",
+    featured: true
   },
   {
     id: 5,
-    title: "Social Media Scheduler",
-    description: "Multi-platform social media management tool with content scheduling, analytics, and team collaboration features.",
-    technologies: ["React", "Express.js", "MongoDB", "AWS S3"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=250&fit=crop&crop=center",
+    title: "Restaurant Management System",
+    description: "A Java console application built with OOP principles, featuring Owner and Cashier modes for menu management, \
+    order processing, and revenue tracking.",
+    technologies: ["Java"],
+    image: restaurantManagementSystem,
     liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
-    featured: false
+    githubUrl: "https://github.com/AhmeedSayeed/Restaurant-Management-System",
+    featured: true
   },
-  {
-    id: 6,
-    title: "Fitness Tracking App",
-    description: "Mobile-first fitness application with workout tracking, nutrition logging, and progress visualization.",
-    technologies: ["React Native", "Node.js", "MongoDB", "Chart.js"],
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center",
-    liveUrl: null,
-    githubUrl: "https://github.com/AhmeedSayeed",
-    featured: false
-  }
 ];
