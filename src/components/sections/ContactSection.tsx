@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { personalData } from '../../data/personal';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,11 +35,34 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with your preferred form handling service
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      // Clear form on success
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+      alert('Message sent successfully! I\'ll get back to you soon.');
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again or contact me directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -211,9 +236,12 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full btn-hero group"
+                disabled={isSubmitting}
+                className="w-full btn-hero group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="relative z-10">Send Message</span>
+                <span className="relative z-10">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </span>
               </button>
             </form>
           </div>
