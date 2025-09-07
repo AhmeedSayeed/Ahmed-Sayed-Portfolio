@@ -1,5 +1,5 @@
 import onlineLibraryWebsite from '../assets/online library website.png'
-import gamesRentalSystem from '../assets/games rental system.png'
+import gamesRentalSystem from '../assets/games rental system.jpg'
 import elevvoInternshipTasks from '../assets/elevvo internship tasks.png'
 import restaurantManagementSystem from '../assets/restaurant management system.png'
 import babyPhotoshop from '../assets/baby photoshop.png'
