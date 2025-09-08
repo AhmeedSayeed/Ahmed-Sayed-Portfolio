@@ -171,7 +171,7 @@ const ContactSection = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/+201024074429?text=Hello%20Ahmed!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+                  href="https://wa.me/201024074429?text=Hello%20Ahmed!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
