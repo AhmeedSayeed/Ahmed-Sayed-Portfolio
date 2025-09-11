@@ -136,7 +136,7 @@
   /* Light Mode Scrollbar */
   ::-webkit-scrollbar {
     width: 16px;
-    height: 16px;
+    height: 35px;
   }
 
   ::-webkit-scrollbar-track {
