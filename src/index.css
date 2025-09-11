@@ -131,31 +131,100 @@
     @apply bg-background text-foreground font-sans scroll-smooth;
   }
 
-  /* Custom Webkit Scrollbar - Portfolio Theme */
+ /* Custom Scrollbar with Direct Colors - Working Solution */
+
+  /* Light Mode Scrollbar */
   ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: #fafafa; /* Direct light background color */
     border-radius: 6px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    background: linear-gradient(135deg, #ffd700, #ffed4e); /* Direct gold colors */
     border-radius: 6px;
-    border: 2px solid hsl(var(--background));
+    border: 2px solid #fafafa;
     transition: all 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--accent)));
-    box-shadow: 0 0 10px hsl(var(--primary) / 0.3);
+    background: linear-gradient(135deg, #ffed4e, #fbbf24);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
   }
 
   ::-webkit-scrollbar-corner {
-    background: hsl(var(--background));
+    background: #fafafa;
+  }
+
+  /* Dark Mode Scrollbar */
+  .dark ::-webkit-scrollbar-track {
+    background: #0a0a0a; /* Direct dark background */
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b); /* Direct gold colors for dark */
+    border: 2px solid #0a0a0a;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #fcd34d, #f59e0b);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+  }
+
+  .dark ::-webkit-scrollbar-corner {
+    background: #0a0a0a;
+  }
+
+  /* Firefox Support */
+  * {
+    scrollbar-width: thin;
+  }
+
+  /* Light mode Firefox colors */
+  html {
+    scrollbar-color: #ffd700 #fafafa;
+  }
+
+  /* Dark mode Firefox colors */
+  .dark {
+    scrollbar-color: #fbbf24 #0a0a0a;
+  }
+
+  /* Alternative with CSS variables that actually work */
+  :root {
+    --scrollbar-bg: #fafafa;
+    --scrollbar-thumb: #ffd700;
+    --scrollbar-thumb-hover: #ffed4e;
+  }
+
+  .dark {
+    --scrollbar-bg: #0a0a0a;
+    --scrollbar-thumb: #fbbf24;
+    --scrollbar-thumb-hover: #fcd34d;
+  }
+
+  /* Using the working variables */
+  .scrollbar-styled::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+    border-radius: 6px;
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 6px;
+    border: 2px solid var(--scrollbar-bg);
+  }
+
+  .scrollbar-styled::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
