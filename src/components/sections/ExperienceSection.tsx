@@ -37,10 +37,10 @@ const ExperienceSection = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-gradient-primary"></div>
+          <div className="absolute left-3 md:left-1/2 transform md:-translate-x-0.5 top-0 bottom-0 w-0.5 bg-gradient-primary"></div>
 
           {/* Experience items */}
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experienceData.map((experience, index) => (
               <div 
                 key={experience.id}
@@ -50,13 +50,13 @@ const ExperienceSection = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-primary rounded-full border-4 border-background shadow-gold"></div>
+                <div className="absolute left-3 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-gradient-primary rounded-full border-2 md:border-4 border-background shadow-gold"></div>
 
                 {/* Content card */}
-                <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${
+                <div className={`w-full md:w-5/12 ml-8 md:ml-0 pr-4 md:pr-0 ${
                   index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                 }`}>
-                  <div className="card-glass group hover:shadow-gold">
+                  <div className="card-glass group hover:shadow-gold p-4 md:p-6">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
