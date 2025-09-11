@@ -67,6 +67,20 @@ const SkillsSection = () => {
                   {skill.description}
                 </p>
 
+                {/* Skills Tags */}
+                {skill.skills && (
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {skill.skills.map((skillName, skillIndex) => (
+                      <span 
+                        key={skillIndex}
+                        className="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20"
+                      >
+                        {skillName}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
                 {/* Decorative line */}
                 <div className="w-12 h-1 bg-gradient-primary rounded-full group-hover:w-full transition-all duration-500"></div>
               </div>
