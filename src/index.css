@@ -135,8 +135,8 @@
 
   /* Light Mode Scrollbar */
   ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
   }
 
   ::-webkit-scrollbar-track {
@@ -209,7 +209,7 @@
 
   /* Using the working variables */
   .scrollbar-styled::-webkit-scrollbar {
-    width: 12px;
+    width: 16px;
   }
 
   .scrollbar-styled::-webkit-scrollbar-track {
