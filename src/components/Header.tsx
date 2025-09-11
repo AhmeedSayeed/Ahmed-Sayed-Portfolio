@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { personalData } from '../data/personal';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
 import { Menu } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -76,28 +77,33 @@ const Header = () => {
             </h1>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`nav-link ${
-                  activeSection === item.id ? 'active' : ''
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
+          {/* Navigation & Theme Toggle */}
+          <div className="flex items-center space-x-4">
+            <nav className="hidden md:flex space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`nav-link ${
+                    activeSection === item.id ? 'active' : ''
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+            
+            <ThemeToggle />
+          </div>
 
           {/* Mobile Menu */}
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger asChild>
-              <button className="md:hidden p-2 text-primary hover:text-accent transition-colors">
-                <Menu className="w-6 h-6" />
-              </button>
-            </SheetTrigger>
+          <div className="md:hidden flex items-center space-x-2">
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger asChild>
+                <button className="p-2 text-primary hover:text-accent transition-colors">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-background border-border">
               <div className="flex flex-col space-y-6 mt-8">
                 <h2 className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
@@ -122,6 +128,7 @@ const Header = () => {
               </div>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </header>
