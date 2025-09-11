@@ -3,7 +3,7 @@ export const skillsData = [
     id: 1,
     title: "Backend Development",
     description: "Expert in ASP.NET Core MVC & Web API development using C#. Specialized in RESTful API design, SQL Server database management with Entity Framework Core, and scalable backend architecture.",
-    icon: "⚙",
+    icon: "",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=300&h=200&fit=crop&crop=center",
     skills: ["C#", "ASP.NET Core", "SQL Server", "Entity Framework", "RESTful APIs"]
   },
@@ -19,7 +19,7 @@ export const skillsData = [
     id: 3,
     title: "System Design & Tools",
     description: "Full-stack system architecture and development workflow optimization. Experienced with Git version control, Docker containerization, and Visual Studio development environment.",
-    icon: "🏗",
+    icon: "",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&crop=center",
     skills: ["System Architecture", "Git", "Docker", "Visual Studio", "Database Design"]
   }
