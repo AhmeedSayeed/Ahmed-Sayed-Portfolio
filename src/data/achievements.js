@@ -43,6 +43,6 @@ export const achievementsData = [
     organization: "Elevvo Pathways",
     date: 2025,
     image: elevvoPathways,
-    description: "Completed Frontend Develepover Internship"
+    description: "Completed Frontend Web Develepover Internship"
   }
 ];
