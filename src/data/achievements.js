@@ -2,6 +2,7 @@ import ecpc2025 from '../assets/ECPC2025.jpg'
 import ecpc2024 from '../assets/ECPC2024.jpg'
 import pythonCourse from '../assets/python course.jpg'
 import aice from '../assets/aice.jpg'
+import elevvoPathways from '../assets/elevvo pathways certificate.png'
 
 export const achievementsData = [
   {
@@ -36,4 +37,12 @@ export const achievementsData = [
     image: aice,
     description: "Completed AI Career Essentials course"
   },
+  {
+    id: 5,
+    title: "Completed Internship",
+    organization: "Elevvo Pathways",
+    date: 2025,
+    image: elevvoPathways,
+    description: "Completed Frontend Develepover Internship"
+  }
 ];
