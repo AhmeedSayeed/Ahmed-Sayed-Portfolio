@@ -18,6 +18,17 @@ export const projectsData = [
   },
   {
     id: 2,
+    title: "Dola Cream Landing Page",
+    description: "A comprehensive web application providing users with book search and borrowing capabilities while allowing \
+    administrators to manage the library inventory.",
+    technologies: ["Vanilla JS", "HTML", "CSS"],
+    image: onlineLibraryWebsite,
+    liveUrl: "https://dola-cream.vercel.app",
+    githubUrl: null,
+    featured: true
+  },
+  {
+    id: 3,
     title: "Games Rental System",
     description: "A Windows forms application where users can browse, rent, and return games, while admins manage the catalog. \
     Includes reporting queries for insights into rentals, popular titles, and vendor performance.",
@@ -28,7 +39,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Elevvo Internship Tasks",
     description: "A set of practical web applications including a Landing Page, Personal Blog, and a Weather Dashboard. \
     Each project demonstrates modern UI design with React and Tailwind CSS, along with API integration, state management, and reusable components.",
@@ -39,7 +50,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "Baby Photoshop",
     description: "A comprehensive image editing application developed with C++ and Qt, featuring 22 custom-designed filters \
     including edge detection, blur effects, and artistic transformations.",
@@ -50,7 +61,7 @@ export const projectsData = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Restaurant Management System",
     description: "A Java console application built with OOP principles, featuring Owner and Cashier modes for menu management, \
     order processing, and revenue tracking.",
