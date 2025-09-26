@@ -1,4 +1,5 @@
 import onlineLibraryWebsite from '../assets/online library website.png'
+import dolaCream from '../assets/dola cream landing page.png'
 import gamesRentalSystem from '../assets/games rental system.jpg'
 import elevvoInternshipTasks from '../assets/elevvo internship tasks.png'
 import restaurantManagementSystem from '../assets/restaurant management system.png'
@@ -19,10 +20,10 @@ export const projectsData = [
   {
     id: 2,
     title: "Dola Cream Landing Page",
-    description: "A comprehensive web application providing users with book search and borrowing capabilities while allowing \
-    administrators to manage the library inventory.",
+    description: "A professional company website showcasing brand identity, services, and products with a modern and responsive design. \
+    The site features a clean, elegant layout that reflects a strong and trustworthy image.",
     technologies: ["Vanilla JS", "HTML", "CSS"],
-    image: onlineLibraryWebsite,
+    image: dolaCream,
     liveUrl: "https://dola-cream.vercel.app",
     githubUrl: null,
     featured: true
